@@ -96,8 +96,8 @@
 		BA12B131F10BCE3BE6E9A02FC908FE9D /* EXPMatchers+beCloseTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE4506716AF52468B3550AD5824670F /* EXPMatchers+beCloseTo.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BC55C8365AEFF8217F6A567607754854 /* EXPDoubleTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = E8899DDCDB159906296A77EA9F670B8C /* EXPDoubleTuple.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BEFFE9FFE52E9A0833A7D2D8FB67EB4D /* EXPMatchers+beSubclassOf.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACF80B5A24CE07B6C736EEF474E7E9C /* EXPMatchers+beSubclassOf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		C4A2CD2E1C655D8300781891 /* TestObjectClass.h in Headers */ = {isa = PBXBuildFile; fileRef = C4A2CD2C1C655D8300781891 /* TestObjectClass.h */; };
-		C4A2CD2F1C655D8300781891 /* TestObjectClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A2CD2D1C655D8300781891 /* TestObjectClass.m */; };
+		C4A2CD321C6561A800781891 /* SGYKVCSafeNSObject.h in Headers */ = {isa = PBXBuildFile; fileRef = C4A2CD301C6561A800781891 /* SGYKVCSafeNSObject.h */; };
+		C4A2CD331C6561A800781891 /* SGYKVCSafeNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A2CD311C6561A800781891 /* SGYKVCSafeNSObject.m */; };
 		C5AAF2C9D129121EDABC7AB35177AFC6 /* SPTTestSuite.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF01BA5773CAF9B2F6768A5AEB29504 /* SPTTestSuite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE3F4ECBB0BC095577D66AE50C8E604C /* EXPFloatTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4CBA4D2825ED03DE841CB750862190 /* EXPFloatTuple.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D74A5AFD793857B1283887BB0AC08D8E /* SPTExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 8130E2C24D57D446CB02B745DEBFDB68 /* SPTExample.m */; };
@@ -261,8 +261,8 @@
 		BF3CD05CED877C5E19CB18BA095BC724 /* SPTSharedExampleGroups.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTSharedExampleGroups.m; path = Specta/Specta/SPTSharedExampleGroups.m; sourceTree = "<group>"; };
 		C0420BD68EF14CF918B80CF6BEFD7E11 /* Expecta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Expecta.xcconfig; sourceTree = "<group>"; };
 		C2D5F98443188468F5CFE556EC251738 /* XCTestCase+Specta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "XCTestCase+Specta.h"; path = "Specta/Specta/XCTestCase+Specta.h"; sourceTree = "<group>"; };
-		C4A2CD2C1C655D8300781891 /* TestObjectClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestObjectClass.h; sourceTree = "<group>"; };
-		C4A2CD2D1C655D8300781891 /* TestObjectClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestObjectClass.m; sourceTree = "<group>"; };
+		C4A2CD301C6561A800781891 /* SGYKVCSafeNSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGYKVCSafeNSObject.h; sourceTree = "<group>"; };
+		C4A2CD311C6561A800781891 /* SGYKVCSafeNSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGYKVCSafeNSObject.m; sourceTree = "<group>"; };
 		C7A1FE2006A967BE06886C450214BDFE /* SpectaUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SpectaUtility.h; path = Specta/Specta/SpectaUtility.h; sourceTree = "<group>"; };
 		C7B5A923D27207113E5B55FE0DACDAD9 /* EXPMatchers+conformTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+conformTo.h"; path = "Expecta/Matchers/EXPMatchers+conformTo.h"; sourceTree = "<group>"; };
 		C849D7BC23725EC2DCDC9EB803322052 /* EXPMatchers+beLessThanOrEqualTo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "EXPMatchers+beLessThanOrEqualTo.h"; path = "Expecta/Matchers/EXPMatchers+beLessThanOrEqualTo.h"; sourceTree = "<group>"; };
@@ -384,8 +384,8 @@
 		2D8E46D7F15A95AA12C65A48ED99B2A3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C4A2CD2C1C655D8300781891 /* TestObjectClass.h */,
-				C4A2CD2D1C655D8300781891 /* TestObjectClass.m */,
+				C4A2CD301C6561A800781891 /* SGYKVCSafeNSObject.h */,
+				C4A2CD311C6561A800781891 /* SGYKVCSafeNSObject.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -665,8 +665,8 @@
 				46137F5CC368BF38BAF0D0AF81DD8FFE /* EXPMatchers+raise.h in Headers */,
 				11C1AEB289C1EB80089349B71F09D04B /* EXPMatchers+raiseWithReason.h in Headers */,
 				260BC7EED9289AF321A6F791964CE472 /* EXPMatchers+respondTo.h in Headers */,
+				C4A2CD321C6561A800781891 /* SGYKVCSafeNSObject.h in Headers */,
 				85E31076D5530AEEB45ACF16B2B8A983 /* EXPMatchers.h in Headers */,
-				C4A2CD2E1C655D8300781891 /* TestObjectClass.h in Headers */,
 				51DDDB0FB4899757CF6A826B531B940D /* EXPUnsupportedObject.h in Headers */,
 				7B223B4E6EF14BA12DA113F7EE10B96C /* NSObject+Expecta.h in Headers */,
 				471FD4F68E27AB26FA2AEBB8B245CEE4 /* NSValue+Expecta.h in Headers */,
@@ -892,7 +892,6 @@
 				CE3F4ECBB0BC095577D66AE50C8E604C /* EXPFloatTuple.m in Sources */,
 				201BF9C605852822CA5A65ADE282A310 /* EXPMatcherHelpers.m in Sources */,
 				BA12B131F10BCE3BE6E9A02FC908FE9D /* EXPMatchers+beCloseTo.m in Sources */,
-				C4A2CD2F1C655D8300781891 /* TestObjectClass.m in Sources */,
 				17572374B2AE183C6347C41E8DF8E579 /* EXPMatchers+beFalsy.m in Sources */,
 				F12D57414A73406831CC032A7170DBFF /* EXPMatchers+beginWith.m in Sources */,
 				1312A7D381C51428CF481E33E3D37901 /* EXPMatchers+beGreaterThan.m in Sources */,
@@ -905,6 +904,7 @@
 				D83677C54D2226C67886A525B0B46FBE /* EXPMatchers+beLessThanOrEqualTo.m in Sources */,
 				2C0A8737FDB9B9C6A6BDF437FD11334C /* EXPMatchers+beNil.m in Sources */,
 				BEFFE9FFE52E9A0833A7D2D8FB67EB4D /* EXPMatchers+beSubclassOf.m in Sources */,
+				C4A2CD331C6561A800781891 /* SGYKVCSafeNSObject.m in Sources */,
 				6F278423C8AE1DA47F35E374BB5B91EC /* EXPMatchers+beSupersetOf.m in Sources */,
 				0C6FF91EB1F0391ED75DC72D31D159EF /* EXPMatchers+beTruthy.m in Sources */,
 				DB30F82FB1BE083D9471B965FB500CA2 /* EXPMatchers+conformTo.m in Sources */,
