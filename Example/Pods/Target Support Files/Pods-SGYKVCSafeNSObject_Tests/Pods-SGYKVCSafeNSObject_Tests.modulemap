@@ -1,0 +1,6 @@
+framework module Pods_SGYKVCSafeNSObject_Tests {
+  umbrella header "Pods-SGYKVCSafeNSObject_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
