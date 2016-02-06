@@ -23,9 +23,16 @@ int const SGYKVCSafeErrorGetValueExceptionCode = 2;
         return [self valueForKey:key];
     } @catch (NSException* e) {
         if (error == nil) return nil;
+//        *error = [[NSError alloc] init];
+        
+//        *error = [NSError errorWithDomain:SGYKVCSafeErrorDomain
+//                                     code:SGYKVCSafeErrorGetValueExceptionCode
+//                                 userInfo:@{ SGYKVCSafeErrorUserInfoExceptionKey: e }];
+        
         *error = [NSError errorWithDomain:SGYKVCSafeErrorDomain
                                      code:SGYKVCSafeErrorGetValueExceptionCode
-                                 userInfo:@{ SGYKVCSafeErrorUserInfoExceptionKey: e }];
+                                 userInfo:nil];
+
     }
 }
 
