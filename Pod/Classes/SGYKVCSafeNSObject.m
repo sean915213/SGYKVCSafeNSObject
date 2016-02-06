@@ -18,40 +18,32 @@ int const SGYKVCSafeErrorGetValueExceptionCode = 2;
 
 -(id)valueForKey:(NSString*)key error:(NSError**)error
 {
-    // Set value inside try/catch for extra safety
     @try {
         return [self valueForKey:key];
     } @catch (NSException* e) {
         if (error == nil) return nil;
-//        *error = [[NSError alloc] init];
-        
-//        *error = [NSError errorWithDomain:SGYKVCSafeErrorDomain
-//                                     code:SGYKVCSafeErrorGetValueExceptionCode
-//                                 userInfo:@{ SGYKVCSafeErrorUserInfoExceptionKey: e }];
-        
+        // Haven't determined why yet but attempting to pack exception into a dictionary in this method causes a BAD_ACCESS_EXCEPTION (regardless of nil check)
         *error = [NSError errorWithDomain:SGYKVCSafeErrorDomain
                                      code:SGYKVCSafeErrorGetValueExceptionCode
                                  userInfo:nil];
-
     }
 }
 
 -(id)valueForKeyPath:(NSString*)keyPath error:(NSError**)error
 {
-    // Set value inside try/catch for extra safety
     @try {
         return [self valueForKey:keyPath];
     } @catch (NSException* e) {
         if (error == nil) return nil;
+        // Haven't determined why yet but attempting to pack exception into a dictionary in this method causes a BAD_ACCESS_EXCEPTION (regardless of nil check)
         *error = [NSError errorWithDomain:SGYKVCSafeErrorDomain
                                      code:SGYKVCSafeErrorGetValueExceptionCode
-                                 userInfo:@{ SGYKVCSafeErrorUserInfoExceptionKey: e }];
+                                 userInfo:nil];
     }
 }
 
 -(void)setValue:(id)value forKey:(NSString*)key error:(NSError**)error
 {
-    // Set value inside try/catch for extra safety
     @try {
         [self setValue:value forKey:key];
     } @catch (NSException* e) {
@@ -64,7 +56,6 @@ int const SGYKVCSafeErrorGetValueExceptionCode = 2;
 
 -(void)setValue:(id)value forKeyPath:(NSString *)keyPath error:(NSError *__autoreleasing  _Nullable *)error
 {
-    // Set value inside try/catch for extra safety
     @try {
         [self setValue:value forKeyPath:keyPath];
     } @catch (NSException* e) {
