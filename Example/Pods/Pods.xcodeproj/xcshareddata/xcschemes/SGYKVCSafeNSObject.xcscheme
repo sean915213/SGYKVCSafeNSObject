@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C38EE9DA0E1AEAF62AEF459B'
+               BlueprintIdentifier = '86891388F9FB21BBA7C4E7A7'
                BlueprintName = 'SGYKVCSafeNSObject'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SGYKVCSafeNSObject.framework'>

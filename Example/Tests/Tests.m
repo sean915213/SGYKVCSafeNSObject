@@ -8,39 +8,63 @@
 
 // https://github.com/Specta/Specta
 
-SpecBegin(InitialSpecs)
+#import "SGYKVCSafeNSObject.h"
 
-//describe(@"these will fail", ^{
-//
-//    it(@"can do maths", ^{
-//        expect(1).to.equal(2);
-//    });
-//
-//    it(@"can read", ^{
-//        expect(@"number").to.equal(@"string");
-//    });
-//    
-//    it(@"will wait for 10 seconds and fail", ^{
-//        waitUntil(^(DoneCallback done) {
-//        
-//        });
-//    });
-//});
+SharedExamplesBegin(MySharedExamples)
+// Global shared examples are shared across all spec files.
 
-describe(@"these will pass", ^{
+sharedExamplesFor(@"error information", ^(NSDictionary *data) {
+    NSError* err = data[@"error"];
+    expect(err.domain).to.equal(SGYKVCSafeErrorDomain);
+});
+
+sharedExamplesFor(@"set value behavior", ^(NSDictionary *data) {
+    itShouldBehaveLike(@"error information", data);
+    expect(((NSError*)data[@"error"]).code).to.equal(SGYKVCSafeErrorSetValueExceptionCode);
+});
+
+sharedExamplesFor(@"get value behavior", ^(NSDictionary *data) {
+    itShouldBehaveLike(@"error information", data);
+    expect(((NSError*)data[@"error"]).code).to.equal(SGYKVCSafeErrorGetValueExceptionCode);
+});
+
+SharedExamplesEnd
+
+SpecBegin(KeyValueTest)
+
+describe(@"These should pass", ^{
     
-    it(@"can do maths", ^{
-        expect(1).beLessThan(23);
+    NSObject* obj = [NSObject new];
+    __block NSError* err = nil;
+    
+    beforeEach(^{ err = nil; });
+    
+    it(@"should not crash", ^{
+        [obj setValue:@"value" forKey:@"definitely not a key" error:&err];
+        expect(err).willNot.beNil();
+        NSDictionary* data = @{@"error" : err};
+        itShouldBehaveLike(@"set value behavior", data);
     });
     
-    it(@"can read", ^{
-        expect(@"team").toNot.contain(@"I");
+    it(@"should not crash", ^{
+        [obj setValue:@"value" forKey:@"definitely not a keyPath" error:&err];
+        expect(err).willNot.beNil();
+        NSDictionary* data = @{@"error" : err};
+        itShouldBehaveLike(@"set value behavior", data);
     });
     
-    it(@"will wait and succeed", ^{
-        waitUntil(^(DoneCallback done) {
-            done();
-        });
+    it(@"should not crash", ^{
+        [obj valueForKey:@"definitely not a key" error:&err];
+        expect(err).willNot.beNil();
+        NSDictionary* data = @{@"error" : err};
+        itShouldBehaveLike(@"get value behavior", data);
+    });
+    
+    it(@"should not crash", ^{
+        [obj valueForKey:@"definitely not a keyPath" error:&err];
+        expect(err).willNot.beNil();
+        NSDictionary* data = @{@"error" : err};
+        itShouldBehaveLike(@"get value behavior", data);
     });
 });
 

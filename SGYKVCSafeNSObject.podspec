@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
-  s.description      = "Provides a safe way to use key value coding on NSObject in Swift.  Since Swift does not support ObjC's @try command it cannot catch the exceptions thrown using key value coding (ie setValue:forKey).  This library provides an extension on NSObject that will catch these exceptions and report them via NSError so that they can be safely used in Swift."
+  s.description      = "Provides a safe way to use key value coding on NSObject.  Since Swift does not support ObjC's @try command it cannot catch the exceptions thrown using key value coding (eg. setValue:forKey).  This library provides an extension on NSObject that will catch these exceptions and report them via NSError so that they can be safely used in Swift."
 
   s.homepage         = "https://github.com/sean915213/SGYKVCSafeNSObject"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
