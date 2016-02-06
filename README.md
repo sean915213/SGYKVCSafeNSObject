@@ -1,5 +1,8 @@
 # SGYKVCSafeNSObject
-### This library provides an extension on NSObject that allows the use of key value coding without fear of exceptions.  This is particularly useful for Swift, where ObjC's @try/@catch blocks cannot be used.  The provided methods catch any key value exceptions and populate an `NSError` object instead of throwing an exception.
+### This library provides an extension on NSObject that allows the use of key value coding without fear of exceptions.
+
+#### Overview
+Key value coding is a bit of Cocoa magic that remains unique to ObjC through `NSObject`.  However, NSObject's KVO methods throw exceptions when things go south and *these cannot be caught in Swift*.  The category this library provides wraps NSObject's KVO methods in @try/@catch blocks and when an exception is thrown an `NSError` object is populated instead.
 
 #### Usage
 Usage is simple.  First import:
