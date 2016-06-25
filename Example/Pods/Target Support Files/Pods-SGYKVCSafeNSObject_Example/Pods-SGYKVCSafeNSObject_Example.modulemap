@@ -1,0 +1,6 @@
+framework module Pods_SGYKVCSafeNSObject_Example {
+  umbrella header "Pods-SGYKVCSafeNSObject_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

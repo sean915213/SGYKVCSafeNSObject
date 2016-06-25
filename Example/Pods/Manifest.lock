@@ -1,6 +1,6 @@
 PODS:
   - Expecta (1.0.5)
-  - SGYKVCSafeNSObject (1.0.1)
+  - SGYKVCSafeNSObject (0.1.0)
   - Specta (1.0.5)
 
 DEPENDENCIES:
@@ -10,13 +10,13 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   SGYKVCSafeNSObject:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
-  SGYKVCSafeNSObject: cd05a64205092ec232b34b243f6c46dce7dfd78c
+  SGYKVCSafeNSObject: 74509dd64e949397f162f161375bc5c48bec21da
   Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
 
-PODFILE CHECKSUM: 4673e6f9a53ad28ebf8d3d4f752b312f8eec589b
+PODFILE CHECKSUM: 91e3801dcaefe740d5f81a2c08ec2e445cc99a4e
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.0.1

@@ -1,10 +1,12 @@
-source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
+target 'SGYKVCSafeNSObject_Example' do
+  pod 'SGYKVCSafeNSObject', :path => '../'
 
-target ‘SGYKVCSafeNSObject_Tests’
+  target 'SGYKVCSafeNSObject_Tests' do
+    inherit! :search_paths
 
-pod 'SGYKVCSafeNSObject', :path => '../'
-
-pod 'Specta'
-pod 'Expecta'
+    pod 'Specta'
+    pod 'Expecta'
+  end
+end

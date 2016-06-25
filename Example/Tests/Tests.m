@@ -59,7 +59,7 @@ describe(@"These should pass", ^{
         NSDictionary* data = @{@"error" : err};
         itShouldBehaveLike(@"get value behavior", data);
     });
-
+    
     it(@"should not crash", ^{
         [obj valueForKey:@"definitely not a keyPath" error:&err];
         expect(err).willNot.beNil();
